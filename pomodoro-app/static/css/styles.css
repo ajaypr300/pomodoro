@@ -1,0 +1,143 @@
+/* Basic Reset */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Style */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Left Side (Pomodoro Timer and Workflow Options) */
+.left-side {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Pomodoro Timer */
+.pomodoro-timer {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pomodoro-timer #timer {
+    font-size: 3em;
+    margin: 20px 0;
+}
+
+.pomodoro-timer .controls {
+    margin: 10px 0;
+}
+
+.pomodoro-timer .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.pomodoro-timer .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Workflow Options */
+.workflow-options {
+    background-color: #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.workflow-options #custom-timers {
+    margin-top: 20px;
+}
+
+.workflow-options h2, .workflow-options h3 {
+    margin-bottom: 15px;
+}
+
+.workflow-options input[type="number"] {
+    width: 80px;
+    margin-right: 10px;
+}
+
+/* Right Side (Task List) */
+.right-side {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.task-list {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+}
+
+.task-list input[type="text"] {
+    width: calc(100% - 80px);
+    margin-right: 10px;
+}
+
+.task-list button {
+    margin-left: 10px;
+}
+
+.task-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-list .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.task-list .complete {
+    background: #dc3545;
+    color: white;
+}
+
+.task-list .incomplete {
+    background: #28a745;
+    color: white;
+}
+
+.task-list .task-item.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
